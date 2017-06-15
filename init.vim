@@ -28,6 +28,7 @@ Plug 'wincent/ferret'
 Plug 'mhinz/vim-grepper'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'dominikduda/vim_current_word'
 
 call plug#end()
 filetype plugin indent on
@@ -102,11 +103,8 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" airline symbols
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.readonly = ''
-" let g:airline_symbols.linenr = ''
+
+" vim_current_word options
+hi CurrentWordTwins cterm=bold,underline
+hi CurrentWord cterm=underline
+let g:vim_current_word#enabled = 1
