@@ -16,7 +16,8 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'benekastah/neomake'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Plug 'bling/vim-airline-themes'
 Plug 'majutsushi/tagbar'
 " Plug 'Shougo/unite.vim'
@@ -25,10 +26,13 @@ Plug 'klen/python-mode'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'isRuslan/vim-es6'
 Plug 'wincent/ferret'
-Plug 'mhinz/vim-grepper'
+"Plug 'mhinz/vim-grepper'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'dominikduda/vim_current_word'
+"Plug 'dominikduda/vim_current_word'
+"Plug 'fntlnz/atags.vim'
+Plug 'itchyny/vim-cursorword'
+
 
 call plug#end()
 filetype plugin indent on
@@ -63,6 +67,9 @@ nnoremap <C-H> <C-W><C-H>
 " Neomake with F5
 nnoremap <F5> :Neomake<CR>
 
+" Add breakpoint with F6
+nnoremap <F6> oimport ipdb; ipdb.set_trace()<ESC>
+
 " Grepper bindings
 " nnoremap <C-g> :Grepper<CR><C-R><C-W><CR>
 nnoremap <leader>git :Grepper -tool git -noswitch<cr>
@@ -83,28 +90,28 @@ nnoremap <C-p> :FZF<cr>
 " let g:fzf_source = 'find * -name .git -prune -o -name staticfiles -prune -o -type f -print -o -type d -print -o -type l -print'
 
 " airline
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
 " unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.linenr = '␤'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.whitespace = 'Ξ'
 
 
-" vim_current_word options
-hi CurrentWordTwins cterm=bold,underline
-hi CurrentWord cterm=underline
-let g:vim_current_word#enabled = 1
+" Tag file
+set tags=/Users/benwadsworth/mytags
