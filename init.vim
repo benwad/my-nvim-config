@@ -13,7 +13,6 @@ Plug 'nvie/vim-flake8'
 Plug 'altercation/vim-colors-solarized'
 Plug 'wesQ3/vim-windowswap'
 " Plug 'Valloric/YouCompleteMe'
-Plug 'Shougo/deoplete.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'benekastah/neomake'
 Plug 'vim-airline/vim-airline'
@@ -32,7 +31,9 @@ Plug 'junegunn/fzf.vim'
 "Plug 'dominikduda/vim_current_word'
 "Plug 'fntlnz/atags.vim'
 Plug 'itchyny/vim-cursorword'
-
+if has('nvim')
+	Plug 'Shougo/deoplete.nvim'
+endif
 
 call plug#end()
 filetype plugin indent on
