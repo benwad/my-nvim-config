@@ -31,6 +31,8 @@ Plug 'junegunn/fzf.vim'
 "Plug 'dominikduda/vim_current_word'
 "Plug 'fntlnz/atags.vim'
 Plug 'itchyny/vim-cursorword'
+Plug 'elzr/vim-json'
+Plug 'elixir-lang/vim-elixir'
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim'
 endif
