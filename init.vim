@@ -40,7 +40,9 @@ if has('nvim')
 endif
 
 call plug#end()
-filetype plugin indent on
+
+filetype plugin on
+filetype indent on
 
 " My custom stuff
 set paste
