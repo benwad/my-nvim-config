@@ -4,6 +4,7 @@ filetype off
 " For vim-plug
 call plug#begin('~/.nvim/plugged')
 
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 " Plug 'kien/ctrlp.vim'
@@ -34,6 +35,10 @@ Plug 'itchyny/vim-cursorword'
 Plug 'elzr/vim-json'
 Plug 'elixir-lang/vim-elixir'
 Plug 'chr4/nginx.vim'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'junegunn/vim-xmark', { 'do': 'make' }
+Plug 'kovisoft/slimv'
+
 
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim'
@@ -104,6 +109,3 @@ let g:airline_solarized_bg='dark'
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-
-" Tag file
-set tags=/Users/benwadsworth/mytags
