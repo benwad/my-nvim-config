@@ -38,6 +38,7 @@ Plug 'chr4/nginx.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/vim-xmark', { 'do': 'make' }
 Plug 'kovisoft/slimv'
+Plug 'neovimhaskell/haskell-vim'
 
 
 if has('nvim')
