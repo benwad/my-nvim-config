@@ -57,6 +57,7 @@ set mouse=a
 set hlsearch
 let mapleader=","
 syntax on
+set splitright
 
 set wildignore+=*/staticfiles/*
 
